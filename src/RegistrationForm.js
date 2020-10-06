@@ -18,9 +18,8 @@ export default function RegistrationForm(props) {
 
   const handleSubmit = (event) => {
     const form = event.currentTarget;
-    const { password, pwdConfirm } = state.data;
     event.preventDefault();
-    const notPassed = form.checkValidity() === false || password !== pwdConfirm;
+    const notPassed = form.checkValidity() === false;
     if (notPassed) {
       event.stopPropagation();
     } else {
